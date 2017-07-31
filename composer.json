@@ -1,0 +1,22 @@
+{
+    "name": "cosmoquestteam/cosmoquest-menu-builder",
+    "type": "plugin",
+    "require": {
+        "illuminate/support": "5.1 - 5.5",
+    },
+    "license": "Apache 2.0",
+    "authors": [
+        {
+            "name": "Ryan Owens",
+            "email": "RyanOwens@linux.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "CosmoQuestMenuBuilder\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    }
+}
