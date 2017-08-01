@@ -14,71 +14,71 @@
             {
                 $title = $target->title();
                 $url = $target->url();
-                $html = `<li class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">${title}<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                  <ul class="dropdown-menu dropdown-full">
-                     <div class="container">`;
+                $html = "<li class='dropdown'>
+                   <a href='#' class='dropdown-toggle' data-toggle='dropdown'>${title}<span><i class='fa fa-angle-down' aria-hidden='true'></i></span></a>
+                  <ul class='dropdown-menu dropdown-full'>
+                     <div class='container'>";
                      foreach ($target->subItems() as $item) {
                          $title = $item->title();
                          $url = $item->url();
-                         $html .= `<div class="col-md-3">
-                             <p class="menuHeader" href="${url}">${title}</p>
-                             <ul>`;
+                         $html .= "<div class='col-md-3'>
+                             <p class='menuHeader' href='${url}'>${title}</p>
+                             <ul>";
                              foreach ($item->subItems() as $subItem) {
                                  $html .= self::buildTargetMenu($subItem);
                              }
-                             $html .= `</ul>
-                                     </div>`;
+                             $html .= "</ul>
+                                     </div>";
                      }
-                $html .= `</div>
+                $html .= "</div>
                   </ul>
-                </li>`;
+                </li>";
                 return $html;
 
             }else if($target->hasSubItems()){
                 $title = $target->title();
                 $url = $target->url();
-                $html = `<li class="dropdown">
-                           <a href="${url}" class="dropdown-toggle" data-toggle="dropdown">${title}<span><i class="fa fa-angle-down" aria-hidden="true"></i></span></a>
-                              <ul class="dropdown-menu">
-                                 <div class="container">
-                                                        <ul>`;
+                $html = "<li class='dropdown'>
+                           <a href='${url}' class='dropdown-toggle' data-toggle='dropdown'>${title}<span><i class='fa fa-angle-down' aria-hidden='true'></i></span></a>
+                              <ul class='dropdown-menu'>
+                                 <div class='container'>
+                                                        <ul>";
                                                         foreach ($target->subItems() as $item) {
                                                             $html .= self::buildTargetMenu($item);
                                                         }
-                                                        $html .= `</ul>
+                                                        $html .= "</ul>
                                                 </div>
                               </ul>
-                        </li>`;
+                        </li>";
                         return $html;
 
             }else {
                 $title = $target->title();
                 $url = $target->url();
-                return `<li><a href="${url}">${title}</a></li>`;
+                return "<li><a href='${url}'>${title}</a></li>";
             }
 
         }
 
         public static function build(array $mainMenuItems)
         {
-            $html = `<div class="navbar-container">
-                        <nav class="navbar" role="navigation">
-                            <div class="navbar-header">
-                              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                 <i class="fa fa-bars"></i>
+            $html = "<div class='navbar-container'>
+                        <nav class='navbar' role='navigation'>
+                            <div class='navbar-header'>
+                              <button type='button' class='navbar-toggle' data-toggle='collapse' data-target='#bs-example-navbar-collapse-1'>
+                                 <i class='fa fa-bars'></i>
                                  Menu
                               </button>
                             </div>
-                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                                <ul class="nav navbar-nav">`;
+                            <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
+                                <ul class='nav navbar-nav'>";
                                   foreach ($mainMenuItems as $menuItem) {
                                       $html .= self::buildTargetMenu($menuItem);
                                   }
-                      $html .= `</ul>
+                      $html .= "</ul>
                             </div>
                         </nav>
-                    </div>`;
+                    </div>";
             return $html;
         }
     }

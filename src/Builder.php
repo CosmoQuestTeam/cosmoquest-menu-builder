@@ -15,16 +15,16 @@
         public static function buildNav(array $topMenuItems, array $mainMenuItems,string $logoUrl, CQMenuBuilderUser $user = null)
         {
             $topMenu = TopMenuBuilder::build($topMenuItems);
-            $mainMenu = MainMenuBuilder::build($mainMenuItems);
             $banner = BannerBuilder::build($logoUrl, $user);
+            $mainMenu = MainMenuBuilder::build($mainMenuItems);
 
-            $html = `<div class="megaWrap">
-                        <div class="navWrap">
+            $html = "<div class='megaWrap'>
+                        <div class='navWrap'>
                             ${topMenu}
                         </div>
                         ${banner}
                         ${mainMenu}
-                        </div>`;
+                        </div>";
 
             return $html;
 

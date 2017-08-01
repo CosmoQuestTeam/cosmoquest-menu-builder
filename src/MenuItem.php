@@ -6,18 +6,27 @@
      */
     class MenuItem
     {
-        private $title = "";
-        private $url = "";
-        private $isMegaMenu = false;
-
-        private $isCategory = false;
+        public $title = "";
+        public $url = "";
+        public $isMegaMenu = false;
+        public $subItems = [];
 
         function __construct(string $title, string $url, bool $isMegaMenu = false, array $subItems = [])
         {
             $this->title = $title;
             $this->url = $url;
-            $this->isMegaMenu = $isMegMenu;
-            $this->subItems = [];
+            $this->isMegaMenu = $isMegaMenu;
+            $this->subItems = $subItems;
+        }
+
+        public function setIsMegaMenu(bool $isMegaMenu)
+        {
+          $this->isMegaMenu = $isMegaMenu;
+        }
+
+        public function appendSubItem(MenuItem $item)
+        {
+          array_push($this->subItems, $item);
         }
 
         public function title()

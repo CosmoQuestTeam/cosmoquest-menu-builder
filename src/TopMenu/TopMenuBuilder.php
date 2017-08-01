@@ -9,19 +9,19 @@
     {
         public static function build(array $topMenuItems)
         {
-            $html = `<div class="topNav">
-            <ul class="rightNav">`;
+            $html = '<div class="topNav">
+            <ul class="rightNav">';
             foreach ($topMenuItems as $item) {
-                $url = $item->url();
-                $title = $item->title();
-                $html .= `<li><a href="${url}">${title}</a></li>`;
+                $url = $item->url;
+                $title = $item->title;
+                $html .= "<li><a href='${url}'>${title}</a></li>";
             }
-                $html .= `<li class="item-search">
-                    <div class="search">
+                $html .= "<li class='item-search'>
+                    <div class='search'>
                       <div id='cse' style='width: 100%;'>Loading</div>
                         <script src='//www.google.com/jsapi' type='text/javascript'></script>
                         <script type='text/javascript'>
-                        google.load('search', '1', {language: 'en', style: src="{{URL::asset('css/gcse.css')}}"});
+                        google.load('search', '1', {language: 'en', style: src='css/gcse.css'});
                         google.setOnLoadCallback(function() {
                         var customSearchOptions = {};
                         var orderByOptions = {};
@@ -42,8 +42,7 @@
                     </div>
                 </li>
             </ul>
-        </div>`;
-
+        </div>";
         return $html;
         }
     }
