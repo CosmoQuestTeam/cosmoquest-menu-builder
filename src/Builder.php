@@ -12,10 +12,10 @@
      */
     class Builder
     {
-        public static function buildNav(array $topMenuItems, array $mainMenuItems,string $logoUrl, CQMenuBuilderUser $user = null)
+        public static function buildNav(array $topMenuItems, array $mainMenuItems,string $logoUrl, CQMenuBuilderUser $user = null, string $homeUrl = "/")
         {
             $topMenu = TopMenuBuilder::build($topMenuItems);
-            $banner = BannerBuilder::build($logoUrl, $user);
+            $banner = BannerBuilder::build($logoUrl, $user, $homeUrl);
             $mainMenu = MainMenuBuilder::build($mainMenuItems);
 
             $html = "<div class='megaWrap'>

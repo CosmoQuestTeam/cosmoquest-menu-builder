@@ -42,12 +42,12 @@
                     </div>";
         }
 
-        public static function build(string $logoUrl, User $user = null)
+        public static function build(string $logoUrl, User $user = null, string $homeUrl)
         {
             $url = $logoUrl;
             $html = "<div class='staticBanner'>
                         <div class='bannerWrap'>
-                           <span class='middleAlign'></span><a href='/'><img class='topLogo' src='${url}'></a>";
+                           <span class='middleAlign'></span><a href='${homeUrl}'><img class='topLogo' src='${url}'></a>";
                           if($user == null)
                           {
                               $html .= self::buildLoginBanner();
