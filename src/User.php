@@ -35,7 +35,7 @@
             return `/user/${name}/settings`;
         }
 
-        public function avatar($width, $height)
+        public function avatar($width = "35px", $height = "35px")
         {
             $url = $this->avatarUrl;
             $class = $this->imageClass;
