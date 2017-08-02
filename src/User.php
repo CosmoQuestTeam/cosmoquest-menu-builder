@@ -39,7 +39,7 @@
         {
             $url = $this->avatarUrl;
             $class = $this->imageClass;
-            return `<img src="${url}" class="img-circle" width="${width}" height="$height">`;
+            return "<img src='${url}' class='img-circle' width='${width}' height='${height}'>";
         }
     }
 
