@@ -17,7 +17,7 @@ class CosmoQuestMenuBuilderServiceProvider extends ServiceProvider
     {
         // pass
     }
-    
+
 }
 
  ?>

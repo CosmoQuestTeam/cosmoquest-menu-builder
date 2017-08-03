@@ -26,13 +26,13 @@
         public function profileUrl()
         {
             $name = $this->name;
-            return `/user/${name}`;
+            return "/user/${name}";
         }
 
         public function settingsUrl()
         {
             $name = $this->name;
-            return `/user/${name}/settings`;
+            return "/user/settings";
         }
 
         public function avatar($width = "35px", $height = "35px")
