@@ -71,7 +71,7 @@
                               </button>
                             </div>
                             <div class='collapse navbar-collapse' id='bs-example-navbar-collapse-1'>
-                                <ul class='nav navbar-nav'>";
+                                <ul class='nav-menu navbar-nav'>";
                                   foreach ($mainMenuItems as $menuItem) {
                                       $html .= self::buildTargetMenu($menuItem);
                                   }
