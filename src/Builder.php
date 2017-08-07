@@ -1,10 +1,11 @@
 <?php
     namespace CosmoQuestMenuBuilder;
 
-    use CosmoQuestMenuBuilder\TopMenu\TopMenuBuilder;
-    use CosmoQuestMenuBuilder\MainMenu\MainMenuBuilder;
     use CosmoQuestMenuBuilder\Banner\BannerBuilder;
+    use CosmoQuestMenuBuilder\TopMenu\TopMenuBuilder;
     use CosmoQuestMenuBuilder\User as CQMenuBuilderUser;
+    use CosmoQuestMenuBuilder\MainMenu\MainMenuBuilder;
+    use CosmoQuestMenuBuilder\FooterMenu\FooterMenuBuilder;
 
 
     /**
@@ -28,6 +29,13 @@
 
             return $html;
 
+        }
+
+        public static function buildFooter(array $footerItems)
+        {
+            $footerMenu = FooterMenuBuilder::build($footerItems);
+            $html = "${footerMenu}";
+            return $html;
         }
     }
 
