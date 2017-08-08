@@ -31,9 +31,9 @@
 
         }
 
-        public static function buildFooter(array $footerItems)
+        public static function buildFooter(array $footerItems, string $leftWidget = null, string $rightWidget = null)
         {
-            $footerMenu = FooterMenuBuilder::build($footerItems);
+            $footerMenu = FooterMenuBuilder::build($footerItems, $leftWidget, $rightWidget);
             $html = "${footerMenu}";
             return $html;
         }

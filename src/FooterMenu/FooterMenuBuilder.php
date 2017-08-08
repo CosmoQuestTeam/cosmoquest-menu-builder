@@ -7,7 +7,7 @@
      */
     class FooterMenuBuilder
     {
-        public static function build(array $menuItems)
+        public static function build(array $menuItems, string $leftWidget = null, string $rightWidget = null)
         {
             $html ="<div class='section'>
             <div class='cq-footer-widget-section'>
@@ -25,24 +25,22 @@
                         </li>
                     </ul>
                 </div>
-                <div class='col-md-5'>
-                    <div class='cq-footer-widget'>
-                        <p>CosmoQuest is supported in part by NASA under cooperative agreement award number NNX16AC68A. Any opinions, findings, and conclusions or recommendations expressed are those of this project and do not necessarily reflect the views of the National Aeronautics and Space Administration (NASA). For a complete listing of sponsors, see our credits page.</p>
-                    </div>
-                </div>
-                <div class='col-md-5'>
-                    <div class='cq-footer-widget'>
-                        <p><a href='#'>CosmoQuest is a partnership of numerous institutions around the globe. Want to get involved?</a>
-                        <a href='#'>Email info(at)cosmoquest(dot)org</a></p>
-                        <p>
-                            Unless otherwise stated, all content is licensed under a <span><a href='#'>Creative Commons Attribution-NonCommercial 4.0 International License.</a></span>
-                        </p>
-                        <a class='creative-commons' href='https://creativecommons.org/licenses/by-nc/4.0/'>
-                            <img src='/images/cc_icon_cc.png'>
-                            <img src='/images/cc_icon_cc_by.png'>
-                        </a>
-                    </div>
-                </div>
+                <div class='col-md-5'>";
+                    if($leftWidget != null)
+                    {
+                        $html .= "<div class='cq-footer-widget'>
+                            ${leftWidget}
+                        </div>";
+                    }
+                $html .= "</div>
+                <div class='col-md-5'>";
+                if($rightWidget != null)
+                {
+                    $html .= "<div class='cq-footer-widget'>
+                        ${rightWidget}
+                    </div>";
+                }
+                $html .= "</div>
             </div>
         </div>";
             return $html;
