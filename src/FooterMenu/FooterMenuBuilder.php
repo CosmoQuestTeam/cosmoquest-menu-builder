@@ -42,8 +42,8 @@
                 }
                 $html .= "
                 <div class='footer-logos'>
-                    <img src='/images/cosmoquest-footer-logo.png'>
-                    <img src='/images/asp-footer-logo.png'>
+                    <a href='https://cosmoquest.org'><img src='/images/cosmoquest-footer-logo.png'></a>
+                    <a href='https://www.astrosociety.org/'><img src='/images/asp-footer-logo.png'></a>
                 </div>
                 </div>
             </div>
