@@ -40,7 +40,12 @@
                         ${rightWidget}
                     </div>";
                 }
-                $html .= "</div>
+                $html .= "
+                <div class='footer-logos'>
+                    <img src='/images/cosmoquest-footer-logo.png'>
+                    <img src='/images/asp-footer-logo.png'>
+                </div>
+                </div>
             </div>
         </div>";
             return $html;
