@@ -32,7 +32,10 @@
                             ${leftWidget}
                         </div>";
                     }
-                $html .= "</div>
+                $html .= "<div class='footer-logos'>
+                    <a href='https://cosmoquest.org'><img src='/images/cosmoquest-footer-logo.png'></a>
+                    <a href='https://www.astrosociety.org/'><img src='/images/asp-footer-logo.png'></a>
+                </div></div>
                 <div class='col-md-5'>";
                 if($rightWidget != null)
                 {
@@ -41,10 +44,7 @@
                     </div>";
                 }
                 $html .= "
-                <div class='footer-logos'>
-                    <a href='https://cosmoquest.org'><img src='/images/cosmoquest-footer-logo.png'></a>
-                    <a href='https://www.astrosociety.org/'><img src='/images/asp-footer-logo.png'></a>
-                </div>
+                
                 </div>
             </div>
         </div>";
