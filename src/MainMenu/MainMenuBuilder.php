@@ -21,7 +21,7 @@
                      foreach ($target->subItems() as $item) {
                          $title = $item->title();
                          $url = $item->url();
-                         $html .= "<div class='col-md-3'>
+                         $html .= "<div class='col-md-3 col-sm-12'>
                              <p class='menuHeader' href='${url}'>${title}</p>
                              <ul>";
                              foreach ($item->subItems() as $subItem) {
