@@ -15,7 +15,7 @@
                 $title = $target->title();
                 $url = $target->url();
                 $html = "<li class='dropdown'>
-                   <a href='#' class='dropdown-toggle' data-toggle='dropdown'>${title}<span><i class='fa fa-angle-down' aria-hidden='true'></i></span></a>
+                   <a href='#' class=''>${title}<span><i class='fa fa-angle-down' aria-hidden='true'></i></span></a>
                   <ul class='dropdown-menu dropdown-full'>
                      <div class='container'>";
                      foreach ($target->subItems() as $item) {
@@ -39,7 +39,7 @@
                 $title = $target->title();
                 $url = $target->url();
                 $html = "<li class='dropdown'>
-                           <a href='${url}' class='dropdown-toggle' data-toggle='dropdown'>${title}<span><i class='fa fa-angle-down' aria-hidden='true'></i></span></a>
+                           <a href='${url}' class=''>${title}<span><i class='fa fa-angle-down' aria-hidden='true'></i></span></a>
                               <ul class='dropdown-menu'>
                                  <div class='container'>
                                                         <ul>";
