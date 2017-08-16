@@ -63,9 +63,9 @@
         public static function build(array $mainMenuItems, array $toppMenuItems)
         {
 
-            $html = '<div class='navbar-container'>
-                     <div class="mobile-topNav">
-                        <ul class="rightNav">';
+            $html = "<div class='navbar-container'>
+                     <div class='mobile-topNav'>
+                        <ul class='rightNav'>";
             foreach ($topMenuItems as $item) {
                 $url = $item->url;
                 $title = $item->title;
