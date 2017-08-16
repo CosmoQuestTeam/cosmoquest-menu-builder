@@ -76,7 +76,7 @@
                                 foreach ($topMenuItems as $item) {
                                     $url = $item->url;
                                     $title = $item->title;
-                                    $html .= "<li><a href='${url}'>${title}</a></li>";
+                                    $html .= "<li class='mobile-topnav-item'><a href='${url}'>${title}</a></li>";
                                 }
                                   foreach ($mainMenuItems as $menuItem) {
                                       $html .= self::buildTargetMenu($menuItem);
