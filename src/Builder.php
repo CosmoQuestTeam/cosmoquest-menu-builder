@@ -17,7 +17,7 @@
         {
             $topMenu = TopMenuBuilder::build($topMenuItems);
             $banner = BannerBuilder::build($logoUrl, $user, $homeUrl);
-            $mainMenu = MainMenuBuilder::build($mainMenuItems);
+            $mainMenu = MainMenuBuilder::build($mainMenuItems, $topMenuItems);
 
             $html = "<div class='megaWrap'>
                         <div class='navWrap'>
