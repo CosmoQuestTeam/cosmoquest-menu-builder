@@ -60,7 +60,7 @@
 
         }
 
-        public static function build(array $mainMenuItems, array $toppMenuItems)
+        public static function build(array $mainMenuItems, array $topMenuItems)
         {
 
             $html = "<div class='navbar-container'>
