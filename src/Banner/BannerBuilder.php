@@ -26,11 +26,11 @@
           //     </div>
           //   </div>
           // </div>";
-          
+
           $html = "<div id='usersettings' class='cq-navigation-dropdown'>
              <a href='#' class='user-menu cq-dropdown-button'>
                  <div class='button-inside'>
-                     <img src='${avatar}'>
+                     ${avatar}
                      <div class='counter' id='nav-notification-counter'
                           v-show='notificationCount > 0'
                           v-html='notificationCount'
@@ -43,7 +43,7 @@
 
                      <div class='profile-settings-header'>
                          <div class='col-sm-4 flex button-inside'>
-                             <img src='${avatar}'>
+                             ${avatar}
                          </div>
                          <div class='col-sm-8 flex'>
                              <a href='${profileUrl}' class='username'>${name}</a>
