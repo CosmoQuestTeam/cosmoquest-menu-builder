@@ -34,7 +34,7 @@
                      <div class='counter' id='nav-notification-counter'
                           v-show='notificationCount > 0'
                           v-html='notificationCount'
-                          style='display:none;'>
+                          >
                      </div>
                  </div>
                  <i class='fa fa-angle-down fa-2x' aria-hidden='true'></i>
@@ -55,7 +55,7 @@
                      </div>
 
                      <div id='notifications' v-if='notificationCount > 0'>
-                         <div class='counter' id='nav-menu-notification-counter'>{ notificationCount }</div>
+                         <div class='counter' id='nav-menu-notification-counter' v-html='notificationCount'></div>
                          <li>
                              <a class='notification' href='/notifications' v-html='notifications[0].message'></a>
                          </li>
