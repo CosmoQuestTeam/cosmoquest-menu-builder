@@ -43,7 +43,7 @@
              <ul id='cqdropdown' class='cq-navigation-dropdown-content'>
 
                      <div class='profile-settings-header'>
-                         <div class='col-sm-4 col-xs-4 flex button-inside'>
+                         <div class='col-sm-4 col-xs-2 flex button-inside'>
                              ${avatar}
                          </div>
                          <div class='col-sm-8  col-xs-8 flex'>
