@@ -54,10 +54,10 @@
                          </div>
                      </div>
 
-                     <div id='notifications' v-if='notificationCount > 0'>
+                     <div id='notifications' v-show='notificationCount > 0'>
                          <div class='counter' id='nav-menu-notification-counter' v-html='notificationCount'></div>
                          <li>
-                             <a class='notification' href='/notifications' v-html='notifications[0].message'></a>
+                             <a class='notification' href='/notifications' v-if='notificationCount > 0' v-html='notifications[0].message'></a>
                          </li>
                      </div>
                      <li><a href='/user/settings'>Profile settings</a></li>
