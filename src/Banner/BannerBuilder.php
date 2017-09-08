@@ -49,7 +49,7 @@
                          <div class='col-sm-8  col-xs-8 flex'>
                              <a href='${profileUrl}' class='username'>${name}</a>
                                  <span>
-                                        <img class='cq-ach' v-for='badge in badges' :src='/ + badge.image_location'>
+                                        <img class='cq-ach' v-for='badge in badges' :src='badgeImageSrc(badge)'>
                                  </span>
                          </div>
                      </div>
