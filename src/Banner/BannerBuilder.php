@@ -39,13 +39,14 @@
                  </div>
                  <i class='fa fa-angle-down fa-2x' aria-hidden='true'></i>
              </a>
+             <div class='user-dropdown-wrapper'>
              <ul id='cqdropdown' class='cq-navigation-dropdown-content'>
 
                      <div class='profile-settings-header'>
-                         <div class='col-sm-4 flex button-inside'>
+                         <div class='col-sm-4 col-xs-4 flex button-inside'>
                              ${avatar}
                          </div>
-                         <div class='col-sm-8 flex'>
+                         <div class='col-sm-8  col-xs-8 flex'>
                              <a href='${profileUrl}' class='username'>${name}</a>
                                  <span>
                                         <img class='cq-ach' v-for='badge in badges' :src='badge.image_location'>
@@ -62,6 +63,7 @@
                      <li><a href='/user/settings'>Profile settings</a></li>
                      <li><a href='/auth/logout'>Log out</a></li>
              </ul>
+             </div>
          </div>";
           return $html;
 
