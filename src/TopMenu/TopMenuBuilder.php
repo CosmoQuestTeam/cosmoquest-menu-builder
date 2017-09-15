@@ -20,16 +20,16 @@ use CosmoQuestMenuBuilder\MenuItem;
                 // $html .= "<li><a href='${url}'><i class='fa-2x fa fa-google-plus' aria-hidden='true'></i></a></li>";
                 switch (strtoupper($title)) {
                   case "TWITTER":
-                    $html .= "<li><a href='${url}'><i class='fa fa-twitter'></i></a></li>";
+                    $html .= "<li class='menu-sm'><a href='${url}'><i class='fa fa-twitter'></i></a></li>";
                     break;
                   case "FACEBOOK":
-                    $html .= "<li><a href='${url}'><i class='fa fa-facebook'></i></a></li>";
+                    $html .= "<li class='menu-sm'><a href='${url}'><i class='fa fa-facebook'></i></a></li>";
                     break;
                   case "GOOGLE+":
-                    $html .= "<li><a href='${url}'><i class='fa fa-google-plus'></i></a></li>";
+                    $html .= "<li class='menu-sm'><a href='${url}'><i class='fa fa-google-plus'></i></a></li>";
                     break;
                   default:
-                    $html .= "<li><a href='${url}'>${title}</a></li>";
+                    $html .= "<li class='menu-sm'><a href='${url}'>${title}</a></li>";
                     break;
                 }
             }
