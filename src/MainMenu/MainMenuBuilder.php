@@ -22,7 +22,7 @@
                          $title = $item->title();
                          $url = $item->url();
                          $html .= "<div class='col-md-3 col-sm-12'>
-                             <p class='menuHeader' href='${url}'>${title}</p>
+                             <a class='menuHeader' href='${url}'>${title}</a>
                              <ul>";
                              foreach ($item->subItems() as $subItem) {
                                  $html .= self::buildTargetMenu($subItem);
