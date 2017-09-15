@@ -1,6 +1,7 @@
 <?php
     namespace CosmoQuestMenuBuilder\TopMenu;
-    use CosmoQuestMenuBuilder\MenuItem;
+
+use CosmoQuestMenuBuilder\MenuItem;
 
     /**
      *
@@ -14,9 +15,22 @@
             foreach ($topMenuItems as $item) {
                 $url = $item->url;
                 $title = $item->title;
-                $html .= "<li><a href='${url}'>${title}</a></li>";
+                switch (strtoupper($title)) {
+                  case "TWITTER":
+                    $html .= "<li><a href='${url}'><i class='fa-2x fa fa-twitter' aria-hidden='true'></i></a></li>";
+                    break;
+                  case "FACEBOOK":
+                    $html .= "<li><a href='${url}'><i class='fa-2x fa fa-facebook-official' aria-hidden='true'></i></a></li>";
+                    break;
+                  case "GOOGLE+":
+                    $html .= "<li><a href='${url}'><i class='fa-2x fa fa-google-plus' aria-hidden='true'></i></a></li>";
+                    break;
+                  default:
+                    $html .= "<li><a href='${url}'>${title}</a></li>";
+                    break;
+                }
             }
-                $html .= "<li class='item-search'>
+            $html .= "<li class='item-search'>
                     <div class='search'>
                       <div id='cse' style='width: 100%;'>Loading</div>
                         <script src='//www.google.com/jsapi' type='text/javascript'></script>
@@ -43,8 +57,6 @@
                 </li>
             </ul>
         </div>";
-        return $html;
+            return $html;
         }
     }
-
- ?>
