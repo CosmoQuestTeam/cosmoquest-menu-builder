@@ -4,7 +4,7 @@
     "require": {
         "illuminate/support": "5.2.*"
     },
-    "license": "Apache 2.0",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Ryan Owens",
