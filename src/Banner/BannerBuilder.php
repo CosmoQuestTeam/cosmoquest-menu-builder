@@ -12,8 +12,8 @@
             $html = "<div class='staticBanner'>
                         <div class='bannerWrap'>
                            <span class='middleAlign'></span><a href='${homeUrl}'><img class='topLogo' src='${url}'></a>
-                           <script>jQuery(document).ready(function () {jQuery("#loginBox").load("/accounts/banner");});</script>
-                            <div id="loginBox"></div>
+                           <script>jQuery(document).ready(function () {jQuery('#loginBox').load('/accounts/banner');});</script>
+                            <div id'loginBo'></div>
                            </div>
                     </div>";
 
