@@ -13,7 +13,7 @@
                         <div class='bannerWrap'>
                            <span class='middleAlign'></span><a href='${homeUrl}'><img class='topLogo' src='${url}'></a>
                            <script>jQuery(document).ready(function () {jQuery('#loginBox').load('/accounts/banner');});</script>
-                            <div id'loginBo'></div>
+                            <div id='loginBox'></div>
                            </div>
                     </div>";
 
