@@ -10,10 +10,19 @@
         {
             $url = $logoUrl;
             $html = "<div class='staticBanner'>
-                        <div class='bannerWrap'>
-                           <span class='middleAlign'></span><a href='${homeUrl}'><img class='topLogo' src='${url}'></a>
-                           <script>jQuery(document).ready(function () {jQuery('#box').load('/accounts/banner');});</script>
-                            <span id='box'></span>
+                            <div class='bannerWrap'>
+                                <span class='middleAlign'></span><a href='${homeUrl}'><img class='topLogo' src='${url}'></a>
+                                    <script>
+                                        function handleReloadModal(event) {
+                                            jQuery('#box').empty();
+                                            jQuery('#box').load('/accounts/banner');
+                                        };
+                                        jQuery(document).ready(function () {
+                                            handleReloadModal(null);
+                                            jQuery('#box').on('change', handleReloadModal);
+                                        });
+                                    </script>
+                                <span id='box'></span>
                            </div>
                     </div>";
 
